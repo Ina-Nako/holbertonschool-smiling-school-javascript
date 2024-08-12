@@ -1,3 +1,5 @@
+//first
+
 document.addEventListener("DOMContentLoaded", function () {
     const carouselInner = document.getElementById("carousel-inner");
     const loader = document.getElementById("quotes-loader");
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 });
 
-
+//second
 
 $(document).ready(function () {
     // Show loader while fetching data
@@ -97,7 +99,7 @@ $(document).ready(function () {
     }
   });
 
-  
+//third  
 
   $(document).ready(function () {
     // Fetch quotes from the API
@@ -149,32 +151,3 @@ $(document).ready(function () {
   });
 
 
-// Lazy Loading Images
-
-  $('img').each(function () {
-    $(this).attr('data-src', $(this).attr('src'));
-    $(this).removeAttr('src');
-  });
-  
-  function lazyLoad() {
-    const threshold = $(window).scrollTop() + $(window).height();
-    $('img[data-src]').each(function () {
-      const imgTop = $(this).offset().top;
-      if (imgTop < threshold) {
-        $(this).attr('src', $(this).attr('data-src')).removeAttr('data-src');
-      }
-    });
-  }
-  
-  $(window).on('scroll', lazyLoad);
-  lazyLoad(); // Initial call
-
-
-  //Auto-Rotate Carousel
-  $('#carouselExampleControls').carousel({
-    interval: 5000, // Rotate every 5 seconds
-  });
-  
-
-
-  
